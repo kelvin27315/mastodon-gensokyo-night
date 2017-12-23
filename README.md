@@ -1,6 +1,6 @@
 # mastodon-gensokyo-night
 
-Mastodonの東方インスタンス[gensokyo.cloud](https://gensokyo.cloud)で動いているbot,幻想郷深夜の創作一本勝負([@gensokyo_night](https://gensokyo.cloud/@gensokyo_night))のプログラムです。
+Mastodonの東方インスタンス[gensokyo.cloud](https://gensokyo.cloud),  [gensokyo.town](https://gensokyo.town)で動いているbot、幻想郷深夜の創作一本勝負([@gensokyo_night@gensokyo.cloud](https://gensokyo.cloud/@gensokyo_night), [@gensokyo_night@gensokyo.town](https://gensokyo.town/@gensokyo_night))のプログラムです。
 
 ### 企画について
 
@@ -9,5 +9,9 @@ Mastodonの東方インスタンス[gensokyo.cloud](https://gensokyo.cloud)で�
 
 
 ### 更新記録
+2017-12-24
+- [gensokyo.cloud](https://gensokyo.cloud)と[gensokyo.town](https://gensokyo.town)で同時に動作するようにしました。
+- ファイルの参照をフルパスで行うようにしました。
+
 2017-09-07
 - 東方天空璋のキャラクタを追加しました。
