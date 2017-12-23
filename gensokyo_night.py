@@ -1,22 +1,23 @@
 from mastodon import Mastodon
 import pandas as pd
 import datetime
+from os import path
 
+PATH = path.dirname(path.abspath(__file__))
 if __name__ == "__main__":
     mastodon_cloud = Mastodon(
-        client_id = "clientcred_cloud.secret",
-        access_token = "usercred_cloud.secret",
+        client_id = PATH + "/clientcred_cloud.secret",
+        access_token = PATH + "/usercred_cloud.secret",
         api_base_url = "https://gensokyo.cloud"
     )
     mastodon = Mastodon(
-            client_id = "clientcred.secret",
-            access_token = "usercred.secret",
+            client_id = PATH + "/clientcred.secret",
+            access_token = PATH + "/usercred.secret",
             api_base_url = "https://gensokyo.town"
     )
 
-
 #CSVからキャラクタ名ランダムに抽出し
-df = pd.read_csv("charactor.csv")
+df = pd.read_csv(PATH + "/charactor.csv")
 sample_1 = df[df['label'] == 1].sample(3)
 sample_2 = df[df['label'] == 2].sample(1)
 sample = pd.concat([sample_1, sample_2])
