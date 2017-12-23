@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     mastodon.log_in(
         "*****@example.com", "****",
-        to_file = "usercred.secret"
+        to_file = "usercred_cloud.secret"
     )
 
     #gensokyo.town
