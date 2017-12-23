@@ -1,21 +1,38 @@
-#! -*- coding: utf-8 -*-
-
 from mastodon import Mastodon
 
-url = "https://gensokyo.cloud"
+"""
+アプリケーションの登録とアカウントへの認証を行う
+"""
 
-Mastodon.create_app("application name",
-    api_base_url = url,
-    to_file = "cred.txt"
-)
+if __name__ == "__main__":
+    #gensokyo.cloud
+    Mastodon.create_app("gensokyo night",
+        api_base_url = "https://gensokyo.cloud",
+        to_file = "clientcred_cloud.secret"
+    )
 
-mastodon = Mastodon(
-    client_id = "cred.txt",
-    api_base_url = url
-)
+    mastodon = Mastodon(
+        client_id = "clientcred_cloud.secret",
+        api_base_url = "https://gensokyo.cloud"
+    )
 
-mastodon.log_in(
-    "****",
-    "****",
-    to_file = "auth.txt"
-)
+    mastodon.log_in(
+        "*****@example.com", "****",
+        to_file = "usercred.secret"
+    )
+
+    #gensokyo.town
+    Mastodon.create_app("gensokyo night",
+        api_base_url = "https://gensokyo.town",
+        to_file = "clientcred.secret"
+    )
+
+    mastodon = Mastodon(
+        client_id = "clientcred.secret",
+        api_base_url = "https://gensokyo.town"
+    )
+
+    mastodon.log_in(
+        "*****@example.com", "*****",
+        to_file = "usercred.secret"
+    )
