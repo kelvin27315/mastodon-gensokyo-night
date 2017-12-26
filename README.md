@@ -9,6 +9,11 @@ Mastodonの東方インスタンス[gensokyo.cloud](https://gensokyo.cloud),  [g
 
 
 ### 更新記録
+
+2017-12-26
+- アプリのアクセス権をアカウントへのデータの書き込みにのみ絞りました。
+- アプリのwebsiteのリンクにGitHubのこのリポジトリを指定しました。
+
 2017-12-24
 - [gensokyo.cloud](https://gensokyo.cloud)と[gensokyo.town](https://gensokyo.town)で同時に動作するようにしました。
 - ファイルの参照をフルパスで行うようにしました。
