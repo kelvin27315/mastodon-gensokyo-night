@@ -5,11 +5,6 @@ from os import path
 
 PATH = path.dirname(path.abspath(__file__))
 if __name__ == "__main__":
-    mastodon_cloud = Mastodon(
-        client_id = PATH + "/clientcred_cloud.secret",
-        access_token = PATH + "/usercred_cloud.secret",
-        api_base_url = "https://gensokyo.cloud"
-    )
     mastodon = Mastodon(
             client_id = PATH + "/clientcred.secret",
             access_token = PATH + "/usercred.secret",
@@ -35,5 +30,4 @@ sent = sent.replace('[\'','')
 sent = sent.replace('\']','')
 sent += "です。各種投稿形式に応じて以下のタグを使い分けてくさだい。\n#幻想郷深夜のお絵描き一本勝負\n#幻想郷深夜の東方MMD一本勝負\n#幻想郷深夜の物書き一本勝負"
 
-mastodon_cloud.toot(sent)
 mastodon.toot(sent)
