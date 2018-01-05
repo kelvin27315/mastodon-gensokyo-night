@@ -10,7 +10,7 @@ Mastodonの東方インスタンス[gensokyo.cloud](https://gensokyo.cloud),  [g
 
 ### 更新記録
 
-2017-01-05
+2018-01-05
 - gensokyo.townにのみ投稿するようにしました。
 
 2017-12-26
