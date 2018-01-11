@@ -10,6 +10,9 @@ Mastodonの東方インスタンス[gensokyo.cloud](https://gensokyo.cloud),  [g
 
 ### 更新記録
 
+2018-01-12
+- 東方憑依華のキャラクタを追加しました。
+
 2018-01-05
 - gensokyo.townにのみ投稿するようにしました。
 
