@@ -2,7 +2,7 @@
 
 Mastodonの東方インスタンス[gensokyo.town](https://gensokyo.town)で動いているbot、幻想郷深夜の創作一本勝負([@gensokyo_night@gensokyo.town](https://gensokyo.town/@gensokyo_night))のプログラムです。
 
-動いてた（インスタンス: [gensokyo.cloud](https://gensokyo.cloud),  アカウント: [@gensokyo_night@gensokyo.cloud](https://gensokyo.cloud/@gensokyo_night)）
+動いてた（インスタンス: gensokyo.clou), アカウント:[@gensokyo_night@gensokyo.cloud）
 
 ### 企画について
 
@@ -23,7 +23,7 @@ Mastodonの東方インスタンス[gensokyo.town](https://gensokyo.town)で動�
 - アプリのwebsiteのリンクにGitHubのこのリポジトリを指定しました。
 
 2017-12-24
-- [gensokyo.cloud](https://gensokyo.cloud)と[gensokyo.town](https://gensokyo.town)で同時に動作するようにしました。
+- gensokyo.cloudと[gensokyo.town](https://gensokyo.town)で同時に動作するようにしました。
 - ファイルの参照をフルパスで行うようにしました。
 
 2017-09-07
