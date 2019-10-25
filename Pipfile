@@ -7,6 +7,7 @@ verify_ssl = true
 
 [packages]
 mastodon-py = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.7"
