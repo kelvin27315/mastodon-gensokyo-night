@@ -13,7 +13,7 @@ if __name__ == "__main__":
             f.write(user_cred)
 
     mastodon = Mastodon(
-        access_token=PATH + "usercred.secret",
+        access_token=PATH + "/usercred.secret",
         api_base_url="https://gensokyo.town",
     )
 
