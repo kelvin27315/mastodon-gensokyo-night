@@ -37,7 +37,7 @@ def post_toot(np_sample: List[str]) -> None:
         text += "・" + str(i) + "\n"
     text += "です。各種投稿形式に応じて以下のタグを使い分けてくさだい。\n#幻想郷深夜のお絵描き一本勝負\n#幻想郷深夜の東方MMD一本勝負\n#幻想郷深夜の物書き一本勝負"
 
-    mastodon.toot(text)
+    mastodon.status_post(text)
 
 
 def main() -> None:
