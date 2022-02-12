@@ -7,11 +7,13 @@ from mastodon import Mastodon
 
 PATH = path.dirname(path.abspath(__file__))
 if __name__ == "__main__":
-    client_cred = environ.get("CLIENT_CRED")
     user_cred = environ.get("USER_CRED")
+    if user_cred is not None:
+        with open(PATH + "/usercred.secret", "w") as f:
+            f.write(user_cred)
+
     mastodon = Mastodon(
-        client_id=client_cred,
-        access_token=user_cred,
+        access_token=PATH + "/usercred.secret",
         api_base_url="https://gensokyo.town",
     )
 
@@ -39,11 +41,11 @@ def post_toot(np_sample: List[str]) -> None:
         text += "・" + str(i) + "\n"
     text += "です。各種投稿形式に応じて以下のタグを使い分けてくさだい。\n#幻想郷深夜のお絵描き一本勝負\n#幻想郷深夜の東方MMD一本勝負\n#幻想郷深夜の物書き一本勝負"
 
-    mastodon.toot(text)
+    mastodon.status_post(text)
 
 
 def main() -> None:
-    file_path = "../character.csv"
+    file_path = "/../character.csv"
     characters = read_csv(file_path)
     character_names = sample_characters(characters)
     post_toot(character_names)
