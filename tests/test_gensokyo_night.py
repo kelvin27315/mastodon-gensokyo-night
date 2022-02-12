@@ -37,7 +37,7 @@ class TestGensokyoNight(unittest.TestCase):
 
     def test_post_toot(self) -> None:
         gn.post_toot(["霧雨 魔理沙", "十六夜 咲夜", "魂魄 妖夢", "博麗 靈夢 (旧作)"])
-        gn.mastodon.toot.assert_called_once_with(
+        gn.mastodon.status_post.assert_called_once_with(
             "次回:"
             + TOMORROW_STR
             + "のお題は\n"
