@@ -9,7 +9,7 @@ license = "MIT"
 python = "^3.9"
 "Mastodon.py" = "^1.5.1"
 pandas = "^1.4.0"
-requests = "2.26.0"
+requests = "2.25.1"
 
 [tool.poetry.dev-dependencies]
 pysen = {version = "0.10.1", extras = ["lint"]}
