@@ -29,4 +29,4 @@ mypy_preset = "strict"
 line_length = 100
 py_version = "py37"
 [[tool.pysen.lint.mypy_targets]]
-  paths = ["./gensokyo_night"]
+  paths = ["./gensokyo_night", "./tests"]
