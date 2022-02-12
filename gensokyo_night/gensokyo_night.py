@@ -13,7 +13,7 @@ if __name__ == "__main__":
     )
 
 # CSVからキャラクタ名ランダムに抽出し
-df = pd.read_csv(PATH + "../charactor.csv")
+df = pd.read_csv(PATH + "../character.csv")
 sample_1 = df[df["label"] == 1].sample(3)
 sample_2 = df[df["label"] == 2].sample(1)
 sample = pd.concat([sample_1, sample_2])
