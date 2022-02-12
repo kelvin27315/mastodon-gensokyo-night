@@ -5,6 +5,7 @@ from unittest.mock import Mock
 import mastodon
 import pandas as pd
 from gensokyo_night import gensokyo_night as gn
+from pandas.util.testing import assert_frame_equal
 
 TOMORROW_STR = "{dt.month}月{dt.day}日".format(dt=date.today() + timedelta(days=1))
 
@@ -17,6 +18,23 @@ class TestGensokyoNight(unittest.TestCase):
 
     def tearDown(self) -> None:
         gn.mastodon = self.original_mastodon
+
+    def test_read_csv(self) -> None:
+        df = gn.read_csv("/../tests/resources/test.csv")
+        expect = pd.DataFrame(
+            {
+                "name": [
+                    "博麗 靈夢 (旧作)",
+                    "霧雨 魔理沙 (旧作)",
+                    "十六夜 咲夜",
+                    "魂魄 妖夢",
+                    "東風谷 早苗",
+                    "稗田 阿求",
+                ],
+                "label": [2, 2, 1, 1, 1, 1],
+            }
+        )
+        assert_frame_equal(df, expect)
 
     def test_sample_characters(self) -> None:
         characters = pd.DataFrame(
