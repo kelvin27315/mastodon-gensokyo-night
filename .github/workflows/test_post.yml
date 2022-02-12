@@ -1,12 +1,10 @@
 name: Post CI
 
 on:
-  schedule:
-    - cron:  '0 14 * * *'
   workflow_dispatch:
 
 jobs:
-  post-toot:
+  test-post-toot:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,5 +22,5 @@ jobs:
         run: poetry install --no-dev
       - name: post toot
         env:
-          USER_CRED: ${{secrets.USER_CRED}}
+          USER_CRED: ${{secrets.TEST_USER_CRED}}
         run: poetry run python gensokyo_night/gensokyo_night.py
