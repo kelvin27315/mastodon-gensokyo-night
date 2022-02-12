@@ -8,8 +8,12 @@ from mastodon import Mastodon
 PATH = path.dirname(path.abspath(__file__))
 if __name__ == "__main__":
     user_cred = environ.get("USER_CRED")
+    if user_cred is not None:
+        with open(PATH + "usercred.secret", "w") as f:
+            f.write(user_cred)
+
     mastodon = Mastodon(
-        access_token=user_cred,
+        access_token="usercred.secret",
         api_base_url="https://gensokyo.town",
     )
 
