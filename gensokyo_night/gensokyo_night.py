@@ -41,7 +41,7 @@ def post_toot(np_sample: List[str]) -> None:
 
 
 def main() -> None:
-    file_path = "../character.csv"
+    file_path = "/../character.csv"
     characters = read_csv(file_path)
     character_names = sample_characters(characters)
     post_toot(character_names)
