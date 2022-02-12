@@ -7,18 +7,8 @@ from mastodon import Mastodon
 
 PATH = path.dirname(path.abspath(__file__))
 if __name__ == "__main__":
-    client_cred = environ.get("CLIENT_CRED")
     user_cred = environ.get("USER_CRED")
-    if client_cred is not None:
-        print(len(client_cred))
-    else:
-        print("client_cred is None")
-    if user_cred is not None:
-        print(len(user_cred))
-    else:
-        print("user_cred is None")
     mastodon = Mastodon(
-        client_id=client_cred,
         access_token=user_cred,
         api_base_url="https://gensokyo.town",
     )
