@@ -24,6 +24,5 @@ jobs:
         run: poetry install --no-dev
       - name: post toot
         env:
-          CLIENT_CRED: ${{secrets.CLIENT_CRED}}
           USER_CRED: ${{secrets.USER_CRED}}
         run: poetry run python gensokyo_night/gensokyo_night.py
