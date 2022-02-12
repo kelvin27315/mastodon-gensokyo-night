@@ -1,4 +1,4 @@
-name: Post CI
+name: Test Post CI
 
 on:
   workflow_dispatch:
