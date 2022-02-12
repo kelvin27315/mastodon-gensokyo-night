@@ -4,7 +4,6 @@ from unittest.mock import Mock
 
 import mastodon
 import pandas as pd
-
 from gensokyo_night import gensokyo_night as gn
 
 TOMORROW_STR = "{dt.month}月{dt.day}日".format(dt=date.today() + timedelta(days=1))
