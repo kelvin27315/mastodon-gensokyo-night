@@ -1,0 +1,32 @@
+name: Lambda Production Deploy
+
+on: [push]
+
+jobs:
+  lambda-cd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9.5'
+      - name: Install Poetry
+        run: |
+          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+          echo "$HOME/.poetry/bin" >> $GITHUB_PATH
+      - name: Installing dependencises using poetry
+        run: poetry install --no-dev
+      - name: Build Project
+        run: |
+          poetry build
+          poetry run pip install --upgrade -t package dist/*.whl
+          zip -r artifact.zip package -x '*.pyc'
+      - name: Deploy
+      - run: pip3 install awscli
+      - run: aws lambda update-function-code --function-name mastodon-gensokyo-night-prd --zip-file fileb://artifact.zip --publish
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_PRD }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_PRD }}
+          AWS_DEFAULT_REGION: us-east-1
