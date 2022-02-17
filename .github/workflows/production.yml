@@ -20,8 +20,8 @@ jobs:
       - name: Generate Deployment Targets
         run: |
           poetry export -f requirements.txt --output requirements.txt
-          poetry run pip install --upgrade -t package -r requirements.txt
-          zip -r artifact.zip package -x '*.pyc'
+          poetry run pip install -t ./ -r requirements.txt
+          zip -r artifact.zip ./* -x
       - name: Production Deploy
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_PRD }}
