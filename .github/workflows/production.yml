@@ -21,7 +21,7 @@ jobs:
         run: |
           poetry export -f requirements.txt --output requirements.txt
           poetry run pip install -t ./ -r requirements.txt
-          zip -r artifact.zip ./* -x
+          zip -r artifact.zip ./*
       - name: Production Deploy
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_PRD }}
