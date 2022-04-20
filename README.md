@@ -36,10 +36,10 @@ poetry run python -m unittest
 ### Python lint/format
 #### Python lint
 ```shell
-docker compose run pysen lint
+make lint
 ```
 
 #### Python format
 ```shell
-docker compose run pysen format
+make format
 ```
