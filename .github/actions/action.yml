@@ -1,0 +1,5 @@
+name: 'Run pysen lint'
+description: 'Run lint'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
