@@ -36,16 +36,10 @@ poetry run python -m unittest
 ### Python lint/format
 #### Python lint
 ```shell
-# poetry環境に入っている場合
-pysen run lint
-# poetry環境に入っていない場合
-poetry run pysen run lint
+docker compose run pysen lint
 ```
 
 #### Python format
 ```shell
-# poetry環境に入っている場合
-pysen run format
-# poetry環境に入っていない場合
-poetry run pysen run format
+docker compose run pysen format
 ```
