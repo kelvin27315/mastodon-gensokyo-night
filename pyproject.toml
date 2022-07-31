@@ -4,6 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["kelvin27315 <seven_units@yahoo.co.jp>"]
 license = "MIT"
+packages = [
+  { include = "gensokyo_night"}
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
