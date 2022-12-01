@@ -8,7 +8,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.9"
 pandas = "^1.4.2"
-"Mastodon.py" = "^1.5.1"
+"Mastodon.py" = "^1.7.0"
 
 [tool.poetry.dev-dependencies]
 pysen = {version = "0.10.1", extras = ["lint"]}
